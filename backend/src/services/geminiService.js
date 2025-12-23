@@ -103,6 +103,9 @@ Generate a concise, helpful response based on this data.
 Intent: ${intent}
 API Response: ${JSON.stringify(apiResponse, null, 2)}
 
+IMPORTANT: All currency amounts must be displayed in TRY (Turkish Lira), NOT dollars ($).
+Always use "TRY" or "Turkish Lira" when mentioning amounts.
+
 Generate a short, friendly message (2-3 sentences max) that presents this information to the user.
 For successful operations, be positive and clear.
 For errors, be helpful and suggest next steps.

@@ -37,7 +37,7 @@ const conversationContexts = new Map();
 /**
  * Handle intent execution and call appropriate API
  */
-async function handleIntent(intent, parameters, context) {
+async function handleIntent(intent, parameters, context, clarification = null) {
   console.log(`[Intent Handler] Processing: ${intent}`, parameters);
 
   try {
@@ -52,8 +52,12 @@ async function handleIntent(intent, parameters, context) {
         const result = await queryTuition(parameters.studentNo);
 
         if (result.success) {
-          // Update context with student number
+          // Update context with student number AND term from API response
           context.studentNo = parameters.studentNo;
+          // Save the actual term returned by the API
+          if (result.data.term) {
+            context.term = result.data.term;
+          }
           const responseText = await generateResponse('QUERY_TUITION', result.data);
 
           return {
@@ -70,7 +74,15 @@ async function handleIntent(intent, parameters, context) {
       }
 
       case 'PAY_TUITION': {
-        const { studentNo, term, amount } = parameters;
+        let { studentNo, term, amount } = parameters;
+
+        // Use context if not provided
+        if (!studentNo && context.studentNo) {
+          studentNo = context.studentNo;
+        }
+        if (!term && context.term) {
+          term = context.term;
+        }
 
         if (!studentNo || !term || !amount) {
           const missing = [];
@@ -144,7 +156,7 @@ async function handleIntent(intent, parameters, context) {
       default: {
         return {
           type: 'clarification',
-          message: parameters.clarification || "I'm not sure what you're asking. I can help you check tuition, make payments, or view unpaid tuition. What would you like to do?",
+          message: clarification || "I'm not sure what you're asking. I can help you check tuition, make payments, or view unpaid tuition. What would you like to do?",
         };
       }
     }
@@ -183,8 +195,8 @@ io.on('connection', (socket) => {
       // Parse intent using Gemini
       const parsed = await parseIntent(message, context);
 
-      // Handle the intent
-      const result = await handleIntent(parsed.intent, parsed.parameters, context);
+      // Handle the intent (pass clarification from Gemini)
+      const result = await handleIntent(parsed.intent, parsed.parameters, context, parsed.clarification);
 
       // Update context
       conversationContexts.set(socket.id, context);
