@@ -1,4 +1,11 @@
-import { Message } from '../types';
+interface Message {
+  id: string;
+  type: 'user' | 'bot';
+  content: string;
+  timestamp: string;
+  data?: any;
+  messageType?: string;
+}
 
 interface MessageBubbleProps {
   message: Message;

@@ -1,4 +1,34 @@
-import { TuitionData, PaymentData, UnpaidData } from '../types';
+interface TuitionData {
+  studentNo?: string;
+  name?: string;
+  term?: string;
+  totalAmount?: number;
+  balance?: number;
+  paidAmount?: number;
+  status?: string;
+}
+
+interface PaymentData {
+  studentNo?: string;
+  term?: string;
+  amount?: number;
+  remainingBalance?: number;
+  transactionRef?: string;
+  status?: string;
+}
+
+interface UnpaidData {
+  term?: string;
+  students?: Array<{
+    studentNo: string;
+    name: string;
+    balance: number;
+    totalAmount: number;
+  }>;
+  totalCount?: number;
+  page?: number;
+  pageSize?: number;
+}
 
 interface TuitionCardProps {
   data: TuitionData | PaymentData | UnpaidData;

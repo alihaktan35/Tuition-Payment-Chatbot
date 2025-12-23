@@ -1,8 +1,16 @@
 import { useState, useEffect, useRef } from 'react';
 import { socketService } from '../services/socketService';
-import { Message } from '../types';
 import { MessageBubble } from './MessageBubble';
 import { TuitionCard } from './TuitionCard';
+
+interface Message {
+  id: string;
+  type: 'user' | 'bot';
+  content: string;
+  timestamp: string;
+  data?: any;
+  messageType?: string;
+}
 
 export function ChatInterface() {
   const [messages, setMessages] = useState<Message[]>([]);
