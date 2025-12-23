@@ -3,7 +3,7 @@ import { config } from '../config/config.js';
 
 // Initialize Gemini AI
 const genAI = new GoogleGenerativeAI(config.geminiApiKey);
-const model = genAI.getGenerativeModel({ model: 'gemini-2.5-flash' });
+const model = genAI.getGenerativeModel({ model: 'gemini-2.5-flash-lite' });
 
 const SYSTEM_PROMPT = `You are an AI assistant for a university tuition payment system.
 Parse the user's intent and extract parameters from their message.
