@@ -238,21 +238,21 @@ Bot: [Shows table of unpaid students]
 
 ## 🌐 Deployment
 
+**See [DEPLOYMENT.md](DEPLOYMENT.md) for complete step-by-step deployment guide.**
+
+Quick overview:
+
 ### Frontend (Netlify)
-1. Push code to GitHub
-2. Connect repository to Netlify
-3. Build command: `npm run build`
-4. Publish directory: `dist`
-5. Add environment variable: `VITE_BACKEND_URL`
+- Build command: `npm run build`
+- Publish directory: `dist`
+- Environment: `VITE_BACKEND_URL`
 
 ### Backend (Render)
-1. Push code to GitHub
-2. Create new Web Service on Render
-3. Connect repository
-4. Add environment variables:
-   - `GEMINI_API_KEY`
-   - `CORS_ORIGIN` (frontend URL)
-5. Deploy
+- Build command: `npm install`
+- Start command: `npm start`
+- Environment: `GEMINI_API_KEY`, `CORS_ORIGIN`, `API_GATEWAY_URL`
+
+**Both services have free tiers - $0/month total cost!**
 
 ---
 
