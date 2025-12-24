@@ -23,7 +23,7 @@ AI Agent chat application for University Tuition Payment System - SE 4458 Assign
 - **Backend API**: https://tuition-payment-chatbot-backend.onrender.com/
 - **GitHub Repository**: [Tuition-Payment-Chatbot](https://github.com/alihaktan35/Tuition-Payment-Chatbot)
 - **API Gateway**: https://ahs-tuition-gateway.azurewebsites.net
-- **Video Demo**: [YouTube - Coming Soon](#)
+- **Video Demo**: https://youtu.be/O0h8EZHynos
 
 ---
 
@@ -290,7 +290,7 @@ Socket.io handles reconnection automatically if the connection drops, maintainin
 | Cloud deployment | Netlify (frontend) + Render (backend) | ✅ |
 | Documentation | Comprehensive README | ✅ |
 | GitHub repository | Public repository with clean structure | ✅ |
-| Video presentation | Coming soon | ⏳ |
+| Video presentation | [YouTube Demo](https://youtu.be/O0h8EZHynos) | ✅ |
 
 ---
 
