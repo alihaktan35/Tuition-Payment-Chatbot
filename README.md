@@ -42,6 +42,25 @@ A production-ready AI-powered chatbot that provides a conversational interface t
 
 ---
 
+## ✅ Assignment Requirements Coverage
+
+| Requirement | Implementation | Status |
+|-------------|----------------|--------|
+| Web frontend framework | React 18 + TypeScript | ✅ |
+| API Gateway integration | All API calls routed through Azure Gateway | ✅ |
+| Real-time messaging | Socket.io WebSocket | ✅ |
+| LLM integration | Google Gemini for intent parsing & context | ✅ |
+| Query tuition API | Implemented with data cards | ✅ |
+| Pay tuition API | Implemented with validation & confirmation | ✅ |
+| Unpaid list API | Admin feature with table view | ✅ |
+| Professional UI | Modern chat interface with Tailwind CSS | ✅ |
+| Cloud deployment | Netlify (frontend) + Render (backend) | ✅ |
+| Documentation | Comprehensive README | ✅ |
+| GitHub repository | Public repository with clean structure | ✅ |
+| Video presentation | [YouTube Demo](https://youtu.be/O0h8EZHynos) | ✅ |
+
+---
+
 ## 🏗️ Architecture
 
 ```
@@ -274,25 +293,6 @@ Backend properly configured to accept requests from the Netlify frontend domain,
 
 ### WebSocket Connection
 Socket.io handles reconnection automatically if the connection drops, maintaining a seamless user experience.
-
----
-
-## ✅ Assignment Requirements Coverage
-
-| Requirement | Implementation | Status |
-|-------------|----------------|--------|
-| Web frontend framework | React 18 + TypeScript | ✅ |
-| API Gateway integration | All API calls routed through Azure Gateway | ✅ |
-| Real-time messaging | Socket.io WebSocket | ✅ |
-| LLM integration | Google Gemini for intent parsing & context | ✅ |
-| Query tuition API | Implemented with data cards | ✅ |
-| Pay tuition API | Implemented with validation & confirmation | ✅ |
-| Unpaid list API | Admin feature with table view | ✅ |
-| Professional UI | Modern chat interface with Tailwind CSS | ✅ |
-| Cloud deployment | Netlify (frontend) + Render (backend) | ✅ |
-| Documentation | Comprehensive README | ✅ |
-| GitHub repository | Public repository with clean structure | ✅ |
-| Video presentation | [YouTube Demo](https://youtu.be/O0h8EZHynos) | ✅ |
 
 ---
 
