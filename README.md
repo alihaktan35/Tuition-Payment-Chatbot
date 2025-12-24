@@ -6,9 +6,13 @@ AI Agent chat application for University Tuition Payment System - SE 4458 Assign
 ## 🎓 Academic Information
 
 **Course**: SE 4458 - Software Architecture & Design of Modern Large Scale Systems
+
 **Assignment**: Assignment 3 - AI Agent Chat Application (Group 2)
+
 **Student**: Ali Haktan SIĞIN
+
 **Academic Year**: 2025-2026
+
 **Submission Date**: December 2025
 
 ---
