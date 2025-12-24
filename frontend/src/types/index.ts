@@ -38,5 +38,3 @@ export interface UnpaidData {
   page?: number;
   pageSize?: number;
 }
-
-export type { Message, TuitionData, PaymentData, UnpaidData };
