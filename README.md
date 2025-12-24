@@ -1,6 +1,8 @@
 # Tuition-Payment-Chatbot
 AI Agent chat application for University Tuition Payment System - SE 4458 Assignment 3 (Group 2)
 
+![Project Banner](https://i.hizliresim.com/j4zj81u.png)
+
 ---
 
 ## 🎓 Academic Information
