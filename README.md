@@ -102,7 +102,7 @@ A production-ready AI-powered chatbot that provides a conversational interface t
 | **Build Tool** | Vite | Lightning-fast development server and optimized production builds |
 | **Real-time** | Socket.io | Robust WebSocket library with automatic reconnection and fallback mechanisms |
 | **Backend** | Node.js + Express | Lightweight, proven stack for building scalable APIs |
-| **AI/LLM** | Google Gemini 2.0 Flash Lite | **Free tier with generous limits**, excellent intent parsing, and fast response times |
+| **AI/LLM** | Google Gemini 2.5 Flash Lite | **Free tier with generous limits**, excellent intent parsing, and fast response times |
 | **HTTP Client** | Axios | Clean API for HTTP requests with interceptors and error handling |
 | **Frontend Hosting** | Netlify | **Free tier**, automatic deployments from Git, CDN distribution, excellent DX |
 | **Backend Hosting** | Render | **Free tier**, supports WebSocket, automatic SSL, easy environment management |
